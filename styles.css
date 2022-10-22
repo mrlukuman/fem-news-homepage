@@ -25,7 +25,6 @@ body {
 }
 
 .grid-container {
-  max-width: 100vw;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
@@ -127,6 +126,39 @@ hr {
   display: none;
 }
 
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.grid-container-2 img {
+  width: 100%;
+}
+
+.popular-item {
+  display: flex;
+}
+
+.popular-description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  line-height: 1.5;
+  justify-content: center;
+}
+
+.popular-description h1 {
+  opacity: 0.5;
+  font-size: 2rem;
+}
+.popular-description h4 {
+  font-size: 1.2rem;
+}
+.popular-description p {
+  opacity: 0.5;
+}
+
 @media (max-width: 900px) {
   .main {
     width: 80%;
@@ -153,5 +185,14 @@ hr {
 
   .desktop_hero_image {
     display: none;
+  }
+
+  .grid-container-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-2 img {
+    width: fit-content;
   }
 }
