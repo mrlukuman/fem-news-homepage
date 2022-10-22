@@ -4,8 +4,115 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .main {
   margin: 2rem;
+  max-width: 1200px;
+}
+
+.grid-container {
+  max-width: 100vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "image image image image new"
+    "description description description description new"
+    "description description description description new";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.menu {
+  display: none;
+}
+.menu-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero__image {
+  grid-area: image;
+}
+
+.hero__image img {
+  width: 100%;
+}
+
+.hero__description {
+  grid-area: description;
+  display: flex;
+}
+
+.hero__title {
+  font-size: 2rem;
+  margin-right: 2rem;
+  font-weight: 900;
+}
+
+.hero_explanation {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__text {
+  margin-bottom: 2rem;
+}
+
+.hero__button {
+  padding: 0.8rem 2rem;
+  background-color: orange;
+  color: white;
+  width: fit-content;
+}
+
+.hero__new {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  grid-area: new;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hero__new p {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero__new h1 {
+  font-size: 2.5rem;
+  color: orange;
+}
+.hero__new h3 {
+  font-size: 1.5rem;
+}
+
+hr {
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
 }
 
 .attribution {
@@ -14,4 +121,37 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.mobile_hero_image {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .main {
+    width: 80%;
+  }
+  header {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-list {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+  }
+
+  .mobile_hero_image {
+    display: inline-block;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop_hero_image {
+    display: none;
+  }
 }
