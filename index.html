@@ -19,12 +19,28 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="main">
+  <body class="">
+    <div id="home" class="main">
       <header>
         <div class="icon"><img src="/assets/images/logo.svg" alt="" /></div>
-        <div class="menu">
-          <img src="/assets/images/icon-menu.svg" alt="" />
+        <div class="">
+          <img class="hamburger" src="/assets/images/icon-menu.svg" alt="" />
+          <div id="modal" class="">
+            <nav>
+              <img
+                class="nav-close"
+                src="/assets/images/icon-menu-close.svg"
+                alt=""
+              />
+              <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
 
         <ul class="menu-list">
@@ -127,5 +143,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Tajudeen Lukuman Aleru</a>.
     </div>
+
+    <script src="/app.js"></script>
   </body>
 </html>
